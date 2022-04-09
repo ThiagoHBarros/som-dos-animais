@@ -12,6 +12,7 @@ import Inicio from './src/screens/Inicio'
 import Animais from './src/screens/SomMacaco'
 import SomMacaco from './src/screens/SomMacaco'
 import SomTigre from './src/screens/SomTigre'
+import SomCachorro from './src/screens/SomCachorro'
 
 
 export default function App() {
@@ -21,7 +22,7 @@ export default function App() {
     return <AppLoading />
   }
   return (
-   <SomTigre/>
+   <SomCachorro/>
   )
 }
 
