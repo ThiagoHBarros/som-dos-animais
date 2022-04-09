@@ -13,13 +13,13 @@ export default function Inicio()
 
    async function tocarSom() {
   
-     const { sound: SomMacaco } = await Audio.Sound.createAsync(
+     const { sound: SomGirafa } = await Audio.Sound.createAsync(
         require('../../../assets/girafasom.mp3')
      );
-     setSom(SomMacaco);
+     setSom(SomGirafa);
  
  
-     await SomMacaco.playAsync(); }
+     await SomGirafa.playAsync(); }
  
    React.useEffect(() => {
      return som

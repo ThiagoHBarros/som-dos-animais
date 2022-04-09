@@ -4,7 +4,7 @@ import { styles } from './styles';
 import ImgMacaco from '../../../assets/macaco.png'
 
 
-export function Animal() {
+export function Macaco() {
   
   return (
     <Image 
