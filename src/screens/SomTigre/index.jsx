@@ -1,9 +1,8 @@
 import React from "react";
 import { styles } from "./styles";
-import { Text, View, StyleSheet, Button} from "react-native";
-import * as Animatable from 'react-native-animatable'; //Import
+import {  View, Button} from "react-native";
+import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Tigre } from "../../components/Tigre";
-import { Botao } from "../../components/Botao";
 import { Audio } from 'expo-av';
 
 export default function SomTigre()
@@ -40,7 +39,6 @@ export default function SomTigre()
     >
     Tigre</Animatable.Text>
     <Tigre/>
-    <Botao/>
     <Button title="Escutar" onPress={tocarSom} />
     </View>
  );

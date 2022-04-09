@@ -1,9 +1,8 @@
 import React from "react";
 import { styles } from "./styles";
-import { Text, View, StyleSheet, Button} from "react-native";
-import * as Animatable from 'react-native-animatable'; //Import
+import { View, Button} from "react-native";
+import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Cachorro } from "../../components/Cachorro";
-import { Botao } from "../../components/Botao";
 import { Audio } from 'expo-av';
 
 export default function SomCachorro()
@@ -40,7 +39,6 @@ export default function SomCachorro()
     >
     Cachorro</Animatable.Text>
     <Cachorro/>
-    <Botao/>
     <Button title="Escutar" onPress={tocarSom} />
     </View>
  );
