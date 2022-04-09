@@ -12,7 +12,7 @@ export default function SomLeao()
    async function tocarSom() {
   
      const { sound: SomLeao } = await Audio.Sound.createAsync(
-        require('../../../assets/Leaosom.mp3')
+        require('../../../assets/leaosom.mp3')
      );
      setSom(SomLeao);
  
