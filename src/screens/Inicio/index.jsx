@@ -2,7 +2,7 @@ import React from "react";
 import { View, Button } from "react-native";
 import { Logo } from "../../components/Logo";
 import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
-import { Audio } from 'expo-av';
+import { Audio } from 'expo-av'; //Importe do SDK de AUDIO
 
 import { styles } from "./styles";
 

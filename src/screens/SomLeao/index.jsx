@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import { View, Button} from "react-native";
 import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Leao } from "../../components/Leao";
-import { Audio } from 'expo-av';
+import { Audio } from 'expo-av'; //Importe do SDK de AUDIO
 
 export default function SomLeao()
 {
@@ -12,7 +12,7 @@ export default function SomLeao()
    async function tocarSom() {
   
      const { sound: SomLeao } = await Audio.Sound.createAsync(
-        require('../../../assets/leaosom.mp3')
+        require('../../../assets/leaosom.mp3') 
      );
      setSom(SomLeao);
  

@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import {  View, Button} from "react-native";
 import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Tigre } from "../../components/Tigre";
-import { Audio } from 'expo-av';
+import { Audio } from 'expo-av'; //Importe do SDK de AUDIO
 
 export default function SomTigre()
 {
@@ -39,7 +39,7 @@ export default function SomTigre()
     >
     Tigre</Animatable.Text>
     <Tigre/>
-    <Button title="Escutar" onPress={tocarSom} />
+    <Button title="Escutar" onPress={tocarSom} /> 
     </View>
  );
 }

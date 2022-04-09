@@ -3,7 +3,7 @@ import { styles } from "./styles";
 import { View, Button} from "react-native";
 import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Cachorro } from "../../components/Cachorro";
-import { Audio } from 'expo-av';
+import { Audio } from 'expo-av';//Importe do SDK de AUDIO
 
 export default function SomCachorro()
 {
