@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { styles } from './styles';
 import fotoLogo from '../../../assets/girafa.png';
-import { MotiImage, MotiView } from 'moti'
+import { MotiImage } from 'moti'
 
 export function Logo() {
   return (
@@ -20,7 +20,7 @@ export function Logo() {
       }}
       transition={{
         type: 'timing',
-        duration: 3000
+        duration: 1000
       }}
     />
   );

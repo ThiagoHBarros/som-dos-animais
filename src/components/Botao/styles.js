@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     flexDirection: 'row',
-    marginLeft: 60,
-    
+    marginLeft: 60, 
   },
 });

@@ -17,4 +17,16 @@ export const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
+    botao: {
+      backgroundColor: theme.colors.cor1,
+      height: 50,
+      width: 10,
+      borderRadius: 20,
+      paddingHorizontal: 10,
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      flexDirection: 'row',
+      marginLeft: 60, 
+    },
+
   });

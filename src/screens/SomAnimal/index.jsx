@@ -1,20 +1,19 @@
 import React from "react";
-import { Text, View, Animated, Button } from "react-native";
+import { styles } from "./styles";
+import { Text, View, StyleSheet, Button} from "react-native";
+import * as Animatable from 'react-native-animatable'; //Import
+import { Animal } from "../../components/Animal";
 import { Botao } from "../../components/Botao";
-import { Logo } from "../../components/Logo";
-import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
 import { Audio } from 'expo-av';
 
-import { styles } from "./styles";
-
-export default function Inicio()
+export default function SomAnimal()
 {
-  const [som, setSom] = React.useState();
+   const [som, setSom] = React.useState();
 
    async function tocarSom() {
   
      const { sound: SomMacaco } = await Audio.Sound.createAsync(
-        require('../../../assets/girafasom.mp3')
+        require('../../../assets/macacosom.mp3')
      );
      setSom(SomMacaco);
  
@@ -26,24 +25,23 @@ export default function Inicio()
        ? () => {
            som.unloadAsync(); }
        : undefined;
-      }, [som]);
-
-    return(
-    <View style={styles.container}>
+   }, [som]);
+   
+   
+   return (
+    <View style={styles.container}> 
     <Animatable.Text 
     style={styles.texto}
     //Abaixo está o controle do comportamento da animação
-    animation="fadeIn"
+    animation="shake"
     useNativeDriver
     duration={3000}
     iterationCount={Infinity}
     >
-      Som dos Animais</Animatable.Text> 
-    <Logo/>
-    <Botao />
-    <View style={styles.teste}>
+    Animais</Animatable.Text>
+    <Animal/>
+    <Botao/>
     <Button title="Escutar" onPress={tocarSom} />
     </View>
-    </View>
-    )
+ );
 }

@@ -9,7 +9,8 @@ import {
 import { Botao } from './src/components/Botao'
 import { Logo } from './src/components/Logo'
 import Inicio from './src/screens/Inicio'
-import Animais from './src/screens/Animais'
+import Animais from './src/screens/SomAnimal'
+import SomAnimal from './src/screens/SomAnimal'
 
 
 export default function App() {
