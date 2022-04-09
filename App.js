@@ -1,20 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import AppLoading from 'expo-app-loading'
+import { 
+  useFonts,
+  Ubuntu_400Regular, 
+  Ubuntu_500Medium, 
+  Ubuntu_700Bold  
+} from '@expo-google-fonts/ubuntu'
+import { Botao } from './src/components/Botao'
+import { Logo } from './src/components/Logo'
+import Inicio from './src/screens/Inicio'
+import Animais from './src/screens/Animais'
+
 
 export default function App() {
+  const [fontsCarregada] = 
+  useFonts({ Ubuntu_700Bold, Ubuntu_400Regular, Ubuntu_500Medium })
+    if(!fontsCarregada) {
+    return <AppLoading />
+  }
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+   <Inicio/>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
