@@ -1,9 +1,7 @@
 import React from "react";
 import { styles } from "./styles";
 import { Text, View} from "react-native";
-import * as Animatable from 'react-native-animatable'; //Importe para realizar a animação no texto
-import { ListaAnimais } from "../../components/ListaAnimais";
-
+import * as Animatable from 'react-native-animatable'; //Import
 export default function Animais()
 {
  return (
