@@ -1,0 +1,7 @@
+{
+  "name": "Som dos Animais",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
