@@ -1,0 +1,27 @@
+ion-card-header {
+    align-items: center;    
+}
+
+ion-card {
+    border: 30px solid #e7e7ff;
+}
+
+.titulo {
+    font-size: 50px;
+}
+
+.subtitulo {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;    
+}
+
+.animal-imagem {
+    display: flex;
+    justify-content: center;
+}
+
+.icone-reproduzir {
+    font-size: 30px;
+    color: #3880FF;
+}
