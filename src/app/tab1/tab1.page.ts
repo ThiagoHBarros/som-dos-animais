@@ -77,4 +77,26 @@ export class Tab1Page {
     this.audio.pause();
   }
 
+  aumentarVelocidade(): void {            
+    let velocidadeAtual = this.audio.playbackRate;    
+    if (velocidadeAtual == 2) {
+      this.audio.playbackRate = 4.0
+    } else if (velocidadeAtual == 4) {
+      this.audio.playbackRate = 6.0
+    } else {
+      this.audio.playbackRate = 2.0
+    }
+  }
+
+  diminuirVelocidade(): void {            
+    let velocidadeAtual = this.audio.playbackRate;    
+    if (velocidadeAtual == 0.75) {
+      this.audio.playbackRate = 0.50
+    } else if (velocidadeAtual == 0.50) {
+      this.audio.playbackRate = 0.25
+    } else {
+      this.audio.playbackRate = 0.75
+    }
+  }
+
 }
