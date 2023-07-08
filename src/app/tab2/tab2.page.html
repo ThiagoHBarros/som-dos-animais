@@ -1,17 +1,75 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content color="primary" class="ion-padding">
+  <ion-list [inset]="true" lines="full" class="lista borda">
+    <ion-list-header color="secondary">
+      <ion-label class="titulo-escolha">História dos Animais</ion-label>
+    </ion-list-header>
+    <ion-item color="secondary" class="item-lista" (click)="exibirHistoria('cachorro')">
+      <ion-label>Cachorro</ion-label>
+      <img src="../../assets/animais/cachorro.png" width="40px" />
+    </ion-item>
+    <ion-item color="secondary" class="item-lista" (click)="exibirHistoria('gato')">
+      <ion-label>Gato</ion-label>
+      <img src="../../assets/animais/gato.png" width="40px" />
+    </ion-item>
+    <ion-item color="secondary" class="item-lista" (click)="exibirHistoria('girafa')">
+      <ion-label>Girafa</ion-label>
+      <img src="../../assets/animais/girafa.png" width="50px" />
+    </ion-item>
+    <ion-item color="secondary" class="item-lista" (click)="exibirHistoria('leao')">
+      <ion-label>Leão</ion-label>
+      <img src="../../assets//animais/leao.png" width="40px" />
+    </ion-item>
+    <ion-item color="secondary" class="item-lista" (click)="exibirHistoria('macaco')">
+      <ion-label>Macaco</ion-label>
+      <img src="../../assets/animais/macaco.png" width="40px" />
+    </ion-item>
+  </ion-list>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card color="secondary" class="borda" *ngIf="animalSelecionado">
+    <ion-card-title class="titulo-escolha">
+      Último animal selecionado: <b>{{nomeAnimal}}</b>
+    </ion-card-title>
+    <div class="d-flex justify-content-center align-items-center">
+      <img [src]="imagemAnimal" width="40%" />
+      <div class="icone-reproduzir">
+        <ion-icon *ngIf="!somExecutando; else pausarSom" name="volume-high-sharp" (click)="executarSom()"></ion-icon>
+        <ng-template #pausarSom>
+          <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+          <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+          <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+        </ng-template>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-modal [isOpen]="exibindo">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="lista">
+          <ion-title>{{nomeAnimal}}</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="fecharModal()">
+              <ion-icon name="close"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding" color="secondary">
+        <div class="d-flex justify-content-center align-items-center">
+          <img [src]="imagemAnimal" width="80px" />
+          <div class="icone-reproduzir">
+            <ion-icon *ngIf="!somExecutando; else pausarSom" name="volume-high-sharp"
+              (click)="executarSom()"></ion-icon>
+            <ng-template #pausarSom>
+              <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+              <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+              <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+            </ng-template>
+          </div>
+        </div>
+        <p class="descricao">{{historiaAnimal}}</p>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>

@@ -1,84 +1,112 @@
 <ion-content color="primary" class="ion-padding">
   <ion-card color="secondary">
-    <div class="animal-imagem">
-      <img src="../../assets//animais/leao.png" width="300px" />
-    </div>
-    <ion-card-header>
-      <ion-card-title class="titulo">
-        Leão
-        <ion-icon *ngIf="!somExecutando.leao" name="volume-high-sharp" class="icone-reproduzir" (click)="executarSom('leao')"></ion-icon>
-        <ion-icon *ngIf="somExecutando.leao" name="pause-circle-sharp" class="icone-reproduzir" (click)="pararExecucao()"></ion-icon>
-      </ion-card-title>      
-    </ion-card-header>
-    <ion-card-content class="subtitulo">      
-      Majestoso felino com uma juba dourada, o leão é o rei das savanas africanas. 
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card color="secondary">
-    <div class="animal-imagem">
-      <img src="../../assets/animais/girafa.png" width="500px" />
-    </div>
-    <ion-card-header>       
-      <ion-card-title class="titulo">
-        Girafa
-        <ion-icon *ngIf="!somExecutando.girafa" name="volume-high-sharp" class="icone-reproduzir" (click)="executarSom('girafa')"></ion-icon>
-        <ion-icon *ngIf="somExecutando.girafa" name="pause-circle-sharp" class="icone-reproduzir" (click)="pararExecucao()"></ion-icon>
-      </ion-card-title>                  
-    </ion-card-header>
-    <ion-card-content class="subtitulo">
-      Elegante e graciosa, a girafa é um dos animais mais altos do reino animal.
-    </ion-card-content>
-  </ion-card> 
-  
-  <ion-card color="secondary">
-    <div class="animal-imagem">
+    <div class="d-flex justify-content-center">
       <img src="../../assets/animais/cachorro.png" width="300px" />
     </div>
-    <ion-card-header>       
-      <ion-card-title class="titulo">
+    <ion-card-header>
+      <ion-card-title class="titulo d-flex justify-content-center align-items-center">
         Cachorro
-        <ion-icon *ngIf="!somExecutando.cachorro" name="volume-high-sharp" class="icone-reproduzir" (click)="executarSom('cachorro')"></ion-icon>
-        <ion-icon *ngIf="somExecutando.cachorro" name="pause-circle-sharp" class="icone-reproduzir" (click)="pararExecucao()"></ion-icon>
-      </ion-card-title>                  
+        <div class="icone-reproduzir">
+          <ion-icon *ngIf="!somExecutando.cachorro; else somCachorro" name="volume-high-sharp"
+            (click)="executarSom('cachorro')"></ion-icon>
+          <ng-template #somCachorro>
+            <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+            <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+            <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+          </ng-template>
+        </div>
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content class="subtitulo">
       Leal e brincalhão, o cachorro é um companheiro fiel e cheio de energia.
     </ion-card-content>
-  </ion-card> 
-
-
+  </ion-card>
   <ion-card color="secondary">
-    <div class="animal-imagem">
+    <div class="d-flex justify-content-center">
       <img src="../../assets/animais/gato.png" width="200px" />
     </div>
-    <ion-card-header>       
-      <ion-card-title class="titulo">
+    <ion-card-header>
+      <ion-card-title class="titulo d-flex justify-content-center align-items-center">
         Gato
-        <ion-icon *ngIf="!somExecutando.gato" name="volume-high-sharp" class="icone-reproduzir" (click)="executarSom('gato')"></ion-icon>
-        <ion-icon *ngIf="somExecutando.gato" name="pause-circle-sharp" class="icone-reproduzir" (click)="pararExecucao()"></ion-icon>
-      </ion-card-title>                  
+        <div class="icone-reproduzir">
+          <ion-icon *ngIf="!somExecutando.gato; else somGato" name="volume-high-sharp"
+            (click)="executarSom('gato')"></ion-icon>
+          <ng-template #somGato>
+            <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+            <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+            <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+          </ng-template>
+        </div>
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content class="subtitulo">
-      Misterioso e independente, o gato é um companheiro felino encantador. 
+      Misterioso e independente, o gato é um companheiro felino encantador.
     </ion-card-content>
-  </ion-card> 
-
-
+  </ion-card>
   <ion-card color="secondary">
-    <div class="animal-imagem">
+    <div class="d-flex justify-content-center">
+      <img src="../../assets/animais/girafa.png" width="500px" />
+    </div>
+    <ion-card-header>
+      <ion-card-title class="titulo d-flex justify-content-center align-items-center">
+        Girafa
+        <div class="icone-reproduzir">
+          <ion-icon *ngIf="!somExecutando.girafa; else somGirafa" name="volume-high-sharp"
+            (click)="executarSom('girafa')"></ion-icon>
+          <ng-template #somGirafa>
+            <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+            <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+            <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+          </ng-template>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="subtitulo">
+      Elegante e graciosa, a girafa é um dos animais mais altos do reino animal.
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="secondary">
+    <div class="d-flex justify-content-center">
+      <img src="../../assets//animais/leao.png" width="300px" />
+    </div>
+    <ion-card-header>
+      <ion-card-title class="titulo d-flex justify-content-center align-items-center">
+        Leão
+        <div class="icone-reproduzir">
+          <ion-icon *ngIf="!somExecutando.leao; else somLeao" name="volume-high-sharp"
+            (click)="executarSom('leao')"></ion-icon>
+          <ng-template #somLeao>
+            <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+            <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+            <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+          </ng-template>
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="subtitulo">
+      Majestoso felino com uma juba dourada, o leão é o rei das savanas africanas.
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="secondary">
+    <div class="d-flex justify-content-center">
       <img src="../../assets/animais/macaco.png" width="300px" />
     </div>
-    <ion-card-header>       
-      <ion-card-title class="titulo">
+    <ion-card-header>
+      <ion-card-title class="titulo d-flex justify-content-center align-items-center">
         Macaco
-        <ion-icon *ngIf="!somExecutando.macaco" name="volume-high-sharp" class="icone-reproduzir" (click)="executarSom('macaco')"></ion-icon>
-        <ion-icon *ngIf="somExecutando.macaco" name="pause-circle-sharp" class="icone-reproduzir" (click)="pararExecucao()"></ion-icon>
-      </ion-card-title>                  
+        <div class="icone-reproduzir">
+          <ion-icon *ngIf="!somExecutando.macaco; else somMacaco" name="volume-high-sharp"
+            (click)="executarSom('macaco')"></ion-icon>
+          <ng-template #somMacaco>
+            <ion-icon name="play-back-sharp" (click)="diminuirVelocidade()"></ion-icon>
+            <ion-icon name="pause-circle-sharp" (click)="pararExecucao()"></ion-icon>
+            <ion-icon name="play-forward-sharp" (click)="aumentarVelocidade()"></ion-icon>
+          </ng-template>
+        </div>
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content class="subtitulo">
-      Brincalhão e ágil, o macaco é um dos animais mais sociáveis e curiosos da natureza. 
+      Brincalhão e ágil, o macaco é um dos animais mais sociáveis e curiosos da natureza.
     </ion-card-content>
-  </ion-card> 
-
+  </ion-card>
 </ion-content>

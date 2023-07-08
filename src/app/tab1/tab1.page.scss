@@ -1,27 +1,23 @@
-ion-card-header {
-    align-items: center;    
-}
-
 ion-card {
     border: 30px solid #e7e7ff;
 }
 
 .titulo {
-    font-size: 50px;
+    font-size: 30px;
+    font-family: cursive !important;
 }
 
 .subtitulo {
     font-size: 25px;
     display: flex;
     justify-content: center;    
-}
-
-.animal-imagem {
-    display: flex;
-    justify-content: center;
+    font-family: cursive !important;
+    text-align: center;
 }
 
 .icone-reproduzir {
-    font-size: 30px;
+    font-size: 25px;
     color: #3880FF;
+    margin-top: 10px;
+    margin-left: 10px;
 }
