@@ -12,7 +12,6 @@ export class Tab2Page {
   animalSelecionado = false;
   nomeAnimal: any;
   imagemAnimal: any;  
-  historiaAnimal = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's star. Lorem Ipsum is simply dummy text";
   audioLeao = "../../assets/audio-animais/leao.mp3";
   audioCachorro = "../../assets/audio-animais/cachorro.mp3";
   audioGato = "../../assets/audio-animais/gato.mp3";
@@ -43,28 +42,28 @@ export class Tab2Page {
     switch(animal){
       case "leao":
         this.nomeAnimal = "Leão";
-        this.imagemAnimal = "../../assets//animais/leao.png";        
+        this.imagemAnimal = "../../assets/animais-svg/leao.svg";        
         this.audio.src = this.audioLeao;
       break
       case "cachorro":
         this.nomeAnimal = "Cachorro";
-        this.imagemAnimal = "../../assets/animais/cachorro.png";
+        this.imagemAnimal = "../../assets/animais-svg/cachorro.svg";
         this.audio.src = this.audioCachorro;
   
         break
       case "macaco":
         this.nomeAnimal = "Macaco";
-        this.imagemAnimal = "../../assets/animais/macaco.png";
+        this.imagemAnimal = "../../assets/animais-svg/macaco.svg";
         this.audio.src = this.audioMacaco;
         break
       case "girafa":
         this.nomeAnimal = "Girafa";
-        this.imagemAnimal = "../../assets/animais/girafa.png";
+        this.imagemAnimal = "../../assets/animais-svg/girafa.svg";
         this.audio.src = this.audioGirafa;
         break
       case "gato":
         this.nomeAnimal = "Gato";
-        this.imagemAnimal = "../../assets/animais/gato.png";
+        this.imagemAnimal = "../../assets/animais-svg/gato.svg";
         this.audio.src = this.audioGato;
         break        
     }     
