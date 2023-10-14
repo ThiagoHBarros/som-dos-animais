@@ -1,5 +1,9 @@
 # som-dos-animais
 
+Objetivo: Práticar e aprimorar o conhecimento.
+
+Descrição: App que reproduz sons de animais e tem a história com a origem dos animas. 
+
 Vídeo completo com todas abas.
 https://drive.google.com/file/d/1h7hpRX0xyUryuPncZBNUVfMa9Y3-jpTr/view?usp=sharing
 
